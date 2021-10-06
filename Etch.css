@@ -1,0 +1,17 @@
+.box{
+    border:gray 1px solid;
+    padding:0px;
+}
+
+#etchContainer{
+display:grid;
+height:700px;
+width:700px;
+
+}
+#button{
+    background-color: aqua;
+}
+body{
+    background-color:black;
+}
