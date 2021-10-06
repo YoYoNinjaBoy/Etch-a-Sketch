@@ -12,7 +12,7 @@ function createGrid(){
         etchContainer.style.gridTemplateColumns=`repeat(${dimensions},auto`;
         etchContainer.style.gridTemplateRows=`repeat(${dimensions},auto`;
     }
-    const resetBtn=document.getElementById('reset');
+const resetBtn=document.getElementById('reset');
     resetBtn.addEventListener('click',function(){
         $('.box').remove();
         do {dimensions=parseFloat(prompt(
@@ -22,4 +22,11 @@ function createGrid(){
         }
         while (Number.isNaN(dimensions)||!Number.isInteger(dimensions)||dimensions>100||dimensions<1);
         createGrid();
+    })
+const box=document.getElementsByClassName('box');
+const borderBtn=document.getElementById('border');
+    borderBtn.addEventListener('click',function(){
+        for (i=0; i<box.length; i++){
+            box[i].style.border='0px';
+        }
     })
