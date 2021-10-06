@@ -15,9 +15,9 @@ function createGrid(){
     const resetBtn=document.getElementById('reset');
     resetBtn.addEventListener('click',function(){
         $('.box').remove();
-        do {dimensions=prompt(
-            'enter a full number 1-100 for the dimensions of the etch you wish to sketch')
+        do {dimensions=parseFloat(prompt(
+            'enter a full number 1-100 for the dimensions of the etch you wish to sketch'))
         }
-        while (isNaN(dimensions)||Number.isInteger(dimensions)===false||dimensions>100||dimensions<1);
+        while (Number.isNaN(dimensions)||!Number.isInteger(dimensions)||dimensions>100||dimensions<1);
         createGrid();
     })
